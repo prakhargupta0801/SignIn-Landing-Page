@@ -1,0 +1,247 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+
+}
+
+#circle{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    transform: translate(-50% ,-50%);
+    border: 2px solid rgb(203, 66, 66);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 99999999999999999999999999999999999999;
+    
+
+}
+.container {
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    /* backdrop-filter: blur(20px); */
+
+}
+
+.blur {
+    width: 100%;
+    height: 100vh;
+    /* backdrop-filter: blur(10px); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sml-container {
+    width: 70%;
+    height: 80vh;
+    /* background-color: rgb(0, 0, 0); */
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1.8vmax;
+    box-shadow: 0.10vmax 0.11vmax 1vmax .1vmax rgb(153, 152, 152);
+    overflow: hidden;
+}
+
+.imgg {
+    width: 60%;
+    height: 80vh;
+    backdrop-filter: blur(20px);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 1.5vmax 0vmax 0vmax 1.5vmax;
+    z-index: -9;
+   
+}
+
+.imgg h1 {
+    display: flex;
+    position: absolute;
+    font: 900 3vmax "montserrat";
+    color: rgb(255, 252, 252);
+    z-index: 9;
+    margin-top: -10vmax;
+    backdrop-filter: blur(5px);
+}
+
+.imgg h2 {
+    display: flex;
+    position: absolute;
+    font: 900 1.3vmax "montserrat";
+    text-align: center;
+    color: rgb(255, 252, 252);
+   
+    z-index: 9;
+}
+
+img {
+    width: 130%;
+    height: 80vh;
+    display: flex;
+    position: relative;
+    background-position: center;
+    margin-left: -5vmax;
+    backdrop-filter: blur(50px);
+
+}
+
+.sing-page {
+    width: 40%;
+    height: 80vh;
+    margin-top: 5vmax;
+    background-color: white;
+    border-radius: 0vmax 1.5vmax 1.5vmax 0vmax;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 70%;
+    height: 20vh;
+    /* height: 60vh; */
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.051);
+    border: 1px solid rgb(164, 164, 164);
+    backdrop-filter: blur(50px);
+    border-radius: 1vmax;
+    transition: 0.4s;
+    display: flex;
+    align-items: center;
+    /* overflow: hidden; */
+    
+
+}
+
+.card:hover {
+    height: 60vh;
+    /* margin-top: 7vmax; */
+}
+
+.card:hover .box {
+    width: 340px;
+    height: 340px;
+}
+
+.box {
+    position: fixed;
+    left: 50%;
+    top: -30%;
+    transform: translateX(-50%);
+    width: 250px;
+    height: 250px;
+    background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec,
+            #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.35);
+    transition: 1s;
+    background-image: url(https://images.unsplash.com/photo-1619102814948-e164e584cf0c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80);
+    /* background-position: center; */
+    background-size: cover;
+
+}
+/* .box img{
+    height: 100%;width: 100%;
+    background-position: center;
+    background-size: cover;
+    
+} */
+
+.loginname {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    justify-content: space-between;
+    transform: translateY(180px);  
+    transition: 5s;
+
+}
+.card .loginname .details{
+    height: 90%;
+    text-align: center;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    justify-content: space-around;
+    transform: translateY(-80px);
+    
+    
+   
+}
+.card:hover .loginname .details{
+    
+    transform: translateY(-30px);
+    transition: 1.5s;
+}
+.card:hover .box{
+    margin-top: 4vmax;
+}
+
+.loginname h1 {
+    font: 900 1.5vmax "montserrat";
+}
+
+.loginname input {
+    display: none;
+    padding: 1vmax 2vmax;
+    border-radius: 20px;
+    font-size: 1vmax;
+   border: none;
+   background-color: rgb(223, 222, 222);
+   transform: translateY(15px);
+   transition: 1s;
+
+}
+.card:hover .loginname input {
+    transition: 5s;
+    display: flex;
+}
+.loginname button{
+    padding: 0.6vmax 2vmax;
+    font: 900 1vmax "montserrat";
+    border-radius: 10px;
+    display: none;
+    justify-content: center;
+}
+.login:hover{
+    background-color: black;
+    color: #fff;
+    justify-content: center;
+
+}
+.card:hover .loginname button{
+
+    display: flex;
+}
+.newuser{
+    padding: 0.6vmax 2vmax;
+    font: 900 1vmax "montserrat";
+    border-radius: 10px;
+    border: none;
+}
+.loginname h2 {
+    font: 900 1.1vmax "montserrat";
+    color: royalblue;
+    text-align: center;
+    
+
+}
